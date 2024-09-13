@@ -6,5 +6,7 @@ target 'LoginFirebase' do
   use_frameworks!
 
   # Pods for LoginFirebase
+  
+  pod 'FirebaseAnalytics'
 
 end
