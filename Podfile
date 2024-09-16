@@ -8,5 +8,6 @@ target 'LoginFirebase' do
   # Pods for LoginFirebase
   
   pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
 
 end
