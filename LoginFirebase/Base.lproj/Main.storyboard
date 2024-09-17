@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ju4-hM-5HP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -58,18 +58,77 @@
                                 <buttonConfiguration key="configuration" style="filled" title="New User"/>
                                 <connections>
                                     <action selector="newUserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wiI-oZ-qNe"/>
+                                    <segue destination="rHJ-ZP-QVn" kind="show" id="bUy-aK-Awe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pHM-AG-3pe"/>
                     <connections>
                         <outlet property="passwordTextField" destination="Pun-37-TsR" id="Me5-cY-XAN"/>
                         <outlet property="usernameTextField" destination="L1K-xL-Mcw" id="pFv-cm-02k"/>
+                        <segue destination="Rcq-im-zBU" kind="show" id="pWz-5c-jS3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883.20610687022895" y="3.5211267605633805"/>
+        </scene>
+        <!--Room Plan View Controller-->
+        <scene sceneID="HjO-JH-yoF">
+            <objects>
+                <viewController id="Rcq-im-zBU" customClass="RoomPlanViewController" customModule="LoginFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7nk-M9-yfH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <roomCaptureView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="008-3h-hNt">
+                                <rect key="frame" x="59" y="349" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </roomCaptureView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cmn-sZ-qcK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zIV-cD-mce"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utB-2o-522" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="794"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B57-bO-gM8">
+            <objects>
+                <viewController id="rHJ-ZP-QVn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xkq-2q-RoT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VJt-B8-D4O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Isz-Ze-hjN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VE5-zj-Vei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695.4198473282443" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s5Q-QE-Dtf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ju4-hM-5HP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dE2-Cb-lZL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oaT-BE-pyp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYa-cx-tQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-43.511450381679388" y="3.5211267605633805"/>
         </scene>

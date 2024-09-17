@@ -51,6 +51,14 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    func navigateToHome() {
+           self.performSegue(withIdentifier: "navigateToHome", sender: self)
+       }
+       
+       func navigateToVerifyEmail() {
+           self.performSegue(withIdentifier: "navigateToEmailVerification", sender: self)
+       }
 
 }
 
