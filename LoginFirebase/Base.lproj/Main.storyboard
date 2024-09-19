@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ju4-hM-5HP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -39,7 +39,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-37-TsR">
                                 <rect key="frame" x="35" y="198" width="321" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oV-hk-Obi">
@@ -94,19 +94,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-es-9YM">
-                                                    <rect key="frame" x="26" y="14" width="302" height="35"/>
+                                                <button opaque="NO" contentMode="top" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcX-es-9YM">
+                                                    <rect key="frame" x="33" y="7" width="300" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.46369511329375046" green="0.49308015876870054" blue="0.73898345232009888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                     <color key="tintColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="gray" title="Button">
-                                                        <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                        <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                     </buttonConfiguration>
                                                 </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="wcX-es-9YM" secondAttribute="bottom" constant="6" id="c3C-Jx-tgR"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="r7u-Qt-Vau">
@@ -116,22 +116,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" alpha="0.69999999999999996" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUt-yI-EHx">
-                                                    <rect key="frame" x="38" y="11" width="63" height="56"/>
-                                                    <color key="backgroundColor" red="0.2978497074" green="0.59332453409999997" blue="0.61647796629999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="tintColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="gray" title="Button">
-                                                        <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
-                                                    </buttonConfiguration>
-                                                </button>
                                                 <button opaque="NO" alpha="0.69999998807907104" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPt-Hw-kmW">
                                                     <rect key="frame" x="111" y="10" width="63" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <color key="backgroundColor" red="0.2978497074" green="0.59332453409999997" blue="0.61647796629999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="tintColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="gray" title="Button">
+                                                    <buttonConfiguration key="configuration" style="gray" image="paperplane.fill" catalog="system">
                                                         <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                                     </buttonConfiguration>
                                                 </button>
@@ -141,7 +132,7 @@
                                                     <color key="backgroundColor" red="0.2978497074" green="0.59332453409999997" blue="0.61647796629999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="tintColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="gray" title="Button">
+                                                    <buttonConfiguration key="configuration" style="gray" image="figure.seated.side.automatic" catalog="system">
                                                         <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                                     </buttonConfiguration>
                                                 </button>
@@ -151,14 +142,21 @@
                                                     <color key="backgroundColor" red="0.2978497074" green="0.59332453409999997" blue="0.61647796629999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="tintColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="gray" title="Button">
+                                                    <buttonConfiguration key="configuration" style="gray" image="spigot" catalog="system">
+                                                        <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" alpha="0.69999998807907104" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6e-YB-4H7">
+                                                    <rect key="frame" x="40" y="9" width="63" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <color key="backgroundColor" red="0.2978497074" green="0.59332453409999997" blue="0.61647796629999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="gray" image="book.pages" catalog="system">
                                                         <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                                     </buttonConfiguration>
                                                 </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="gUt-yI-EHx" firstAttribute="centerY" secondItem="Brf-kL-MVg" secondAttribute="centerY" id="zD6-gH-aCB"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -168,12 +166,12 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="80C-Ao-8Vx">
                                         <rect key="frame" x="20" y="244.33333015441895" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80C-Ao-8Vx" id="Suh-39-BPH">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80C-Ao-8Vx" id="Suh-39-BPH">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-Lb-hS0">
-                                                    <rect key="frame" x="134" y="5" width="80" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-Lb-hS0">
+                                                    <rect key="frame" x="135" y="40" width="79" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                     <color key="textColor" red="0.2233278846" green="0.1693299445" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -264,7 +262,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.pages" catalog="system" width="107" height="128"/>
+        <image name="figure.seated.side.automatic" catalog="system" width="128" height="119"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <image name="spigot" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
