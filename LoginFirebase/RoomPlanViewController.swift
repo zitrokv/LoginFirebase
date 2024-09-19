@@ -5,10 +5,11 @@
 //  Created by Mañanas on 17/9/24.
 //
 
+import Foundation
 import UIKit
 import RoomPlan
 
-class RoomPlanViewController: UIViewController, RoomCaptureViewDelegate {
+class RoomPlanViewController: UITableViewController, RoomCaptureViewDelegate {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var exportButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
@@ -22,7 +23,23 @@ class RoomPlanViewController: UIViewController, RoomCaptureViewDelegate {
         roomCaptureView = RoomCaptureView(frame: view.bounds)
         roomCaptureView.delegate = self
         view.insertSubview(roomCaptureView, at: 0)
-    }
+        // Disable back button
+          self.navigationItem.setHidesBackButton(true, animated: false)
+      }
+      
+      override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          // Hide navigation bar
+          self.navigationController?.isNavigationBarHidden = true
+          roomCaptureView?.captureSession.run(configuration: RoomCaptureSession.Configuration())
+      }
+      
+      override func viewWillDisappear(_ animated: Bool) {
+          super.viewWillDisappear(animated)
+          // Show navigation bar
+          self.navigationController?.isNavigationBarHidden = false
+      }
+
     
     override func viewDidAppear(_ animated: Bool) {
          super.viewDidAppear(animated)
@@ -33,10 +50,12 @@ class RoomPlanViewController: UIViewController, RoomCaptureViewDelegate {
         doneButton.isHidden = true
     }
     
+    
+    
     func captureView(didPresent: CapturedRoom, error: Error?) {
         statusLabel.isHidden = false
             statusLabel.text = error == nil ? "The scan was successfully completed" :
-                                            "An error occurred during the scan: \(error)"
+                                          "An error occurred during the scan: \(error)"
         finalResults = didPresent
         exportButton.isHidden = false
     }
@@ -49,8 +68,8 @@ class RoomPlanViewController: UIViewController, RoomCaptureViewDelegate {
             
             let activityController = UIActivityViewController(activityItems: [destinationURL], applicationActivities: nil)
             
-                       // For an iPad:
-                       if let popoverController = activityController.popoverPresentationController {
+                  // For an iPad:
+            if let popoverController = activityController.popoverPresentationController {
                                popoverController.sourceView = exportButton
                            }
                        

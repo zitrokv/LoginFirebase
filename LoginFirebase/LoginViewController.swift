@@ -27,10 +27,15 @@ class LoginViewController: UIViewController {
                 print("Error al iniciar sesión")
             } else {
                 print("Login correcto")
+                self.goToHome()
             }
             
         }
     }
+    
+    func goToHome() {
+            self.performSegue(withIdentifier: "goToHome", sender: self)
+        }
     
     @IBAction func newUserButton(_ sender: Any) {
         let email = usernameTextField.text!
@@ -45,6 +50,8 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
